@@ -12,3 +12,6 @@
 @media(prefers-reduced-motion:reduce){.pontes-preview *{transition:none!important;scroll-behavior:auto!important}}
 .pontes-preview .hero-photo img{transform:scale(1.23);transform-origin:left center;}
 
+/* Development projects retain the preview palette and stack on mobile. */
+@media(min-width:641px){.pontes-preview .cards.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pontes-preview .project-detail .prose li{margin-bottom:14px}.pontes-preview .project-detail .actions{flex-wrap:wrap}
