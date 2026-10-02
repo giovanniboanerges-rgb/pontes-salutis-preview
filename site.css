@@ -15,3 +15,19 @@
 /* Development projects retain the preview palette and stack on mobile. */
 @media(min-width:641px){.pontes-preview .cards.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .pontes-preview .project-detail .prose li{margin-bottom:14px}.pontes-preview .project-detail .actions{flex-wrap:wrap}
+
+/* Long-form life and rehabilitation pages. */
+.pontes-preview .life-introduction,.pontes-preview .life-areas-intro{max-width:760px}
+.pontes-preview .life-areas-intro{margin-bottom:42px}
+.pontes-preview .life-article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:70px;align-items:start;margin-bottom:70px}
+.pontes-preview .life-photo img{width:100%;max-height:650px;object-fit:cover}
+.pontes-preview .life-article .prose h2:first-child{margin-top:44px}
+.pontes-preview .life-highlight{background:var(--green);color:#fff;padding:56px; margin-bottom:48px}
+.pontes-preview .life-highlight .eyebrow{color:var(--gold)}
+.pontes-preview .life-highlight h2,.pontes-preview .life-highlight p{max-width:850px}
+.pontes-preview .life-highlight p:last-child{margin-bottom:0}
+.pontes-preview .life-closing{font-size:20px}
+@media(max-width:980px){.pontes-preview .life-article{gap:35px}}
+@media(max-width:640px){.pontes-preview .life-article{grid-template-columns:1fr;gap:30px;margin-bottom:40px}.pontes-preview .life-photo img{height:350px}.pontes-preview .life-highlight{padding:30px 24px}.pontes-preview .life-closing{font-size:18px}}
+
+.pontes-preview .life-article{margin-bottom:0}.pontes-preview .life-body{margin-bottom:70px}
