@@ -31,3 +31,8 @@
 @media(max-width:640px){.pontes-preview .life-article{grid-template-columns:1fr;gap:30px;margin-bottom:40px}.pontes-preview .life-photo img{height:350px}.pontes-preview .life-highlight{padding:30px 24px}.pontes-preview .life-closing{font-size:18px}}
 
 .pontes-preview .life-article{margin-bottom:0}.pontes-preview .life-body{margin-bottom:70px}
+
+/* Five areas remain readable without crowding a single row. */
+.pontes-preview .cards.life-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1180px){.pontes-preview .cards.life-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.pontes-preview .cards.life-grid{grid-template-columns:1fr}}
