@@ -21,8 +21,10 @@ document.addEventListener('keydown', e => {
   if (active) { closeSubs(); active.focus(); }
   else if (menu?.getAttribute('aria-expanded') === 'true') { menu.click(); menu.focus(); }
 });
+const currentPage=document.body.dataset.page;
+const parentPage=currentPage.startsWith('projekt-')?'projekti':currentPage.startsWith('prica-')?'price':['bratovstina','rehabilitacija','obrazovanje','poljoprivreda','prerada-hrane'].includes(currentPage)?'nas-rad':['volontiranje','partnerstva'].includes(currentPage)?'ukljuci-se':currentPage;
 document.querySelectorAll('[data-page]').forEach(a => {
-  if (a.tagName === 'A' && a.dataset.page === document.body.dataset.page) a.setAttribute('aria-current','page');
+  if (a.tagName === 'A' && a.dataset.page === parentPage) a.setAttribute('aria-current','page');
 });
 document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('[data-filter]').forEach(x => x.setAttribute('aria-pressed',String(x===b)));
